@@ -62,7 +62,7 @@ pipeline {
             stage('Build') {
                 steps {
                     //mvn package
-                    sh "mvn -U clean package -D maven.test.skip -P ${PROFILE} -s /usr/local/maven/conf/settings.tp.xml"
+                    sh "mvn -U clean package -D maven.test.skip -P ${PROFILE} -s /opt/software/maven/maven/conf/settings.xml"
                     echo 'Build Success!'
                 }
             }
